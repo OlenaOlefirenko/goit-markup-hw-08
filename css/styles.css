@@ -1,0 +1,146 @@
+:root {
+  --main-background-color: #e5e5e5;
+  --header-background-color: #ffffff;
+  --sec-background-color: #f5f4fa;
+  --dark-background-color: #2f303a;
+
+  --primary-text-color: #212121;
+  --sec-text-color: #757575;
+  --white-text-color: #ffffff;
+  --accent-color: #2196f3;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+/* Header */
+
+header {
+  background-color: var(--header-background-color);
+}
+
+/* Logo */
+.logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+.logo-header {
+  color: #000000;
+}
+
+.logo-footer {
+  color: var(--white-text-color);
+}
+
+/* Site nav */
+
+.site-nav .link {
+  color: var(--primary-text-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+/* Contacts container */
+
+.contacts-container .contacts-link {
+  color: var(--sec-text-color);
+}
+
+.contacts-container .contacts-link:hover,
+.contacts-container .contacts-link:focus {
+  color: var(--accent-color);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Hero */
+
+.hero-studio {
+  background-color: var(--dark-background-color);
+}
+
+.hero-studio .main-caption {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--header-background-color);
+}
+
+.hero-studio .button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--header-background-color);
+  background-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-background-color);
+}
+
+.contacts-footer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contacts-footer:hover,
+.contacts-footer :focus {
+  color: var(--accent-color);
+}
+
+.text-address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: var(--header-background-color);
+}
