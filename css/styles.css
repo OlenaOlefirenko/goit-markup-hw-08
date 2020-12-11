@@ -9,8 +9,10 @@
   --white-text-color: #ffffff;
   --accent-color: #2196f3;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: var(--main-background-color);
 }
 
 h2 {
@@ -22,6 +24,7 @@ h2 {
 
   color: var(--primary-text-color);
 }
+
 /* Header */
 
 header {
@@ -29,6 +32,7 @@ header {
 }
 
 /* Logo */
+
 .logo {
   font-family: Raleway;
   font-weight: 700;
@@ -114,13 +118,98 @@ a {
   background-color: var(--accent-color);
 }
 
+/* Our qualities */
+
+.section-quality .quality-caption {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-text-color);
+}
+
+.section-quality .text-quality {
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: var(--sec-text-color);
+}
+
+/* Our command */
+
+.section-command {
+  background-color: var(--sec-background-color);
+}
+
+.section-command .command-caption {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.section-command .text-command {
+  font-size: 16px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+
+  color: var(--sec-text-color);
+}
+/* Hero portfolio */
+
+.section-portfolio .button-filter {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+  background-color: var(--sec-background-color);
+}
+
+.section-portfolio .button-filter:hover,
+.section-portfolio .button-filter:focus {
+  color: var(--accent-color);
+}
+
+/* Project */
+
+.section-portfolio .caption-project {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+
+  letter-spacing: 0.06em;
+
+  color: var(--primary-text-color);
+}
+
+.section-portfolio .text-project {
+  font-size: 16px;
+  line-height: 1.9;
+
+  letter-spacing: 0.03em;
+
+  color: var(--sec-text-color);
+}
+
 /* Footer */
 footer {
   background-color: var(--dark-background-color);
 }
 
 .contacts-footer {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 
