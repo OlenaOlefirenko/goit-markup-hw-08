@@ -15,6 +15,23 @@ body {
   background-color: var(--main-background-color);
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 h2 {
   font-weight: 700;
   font-size: 36px;
@@ -25,16 +42,35 @@ h2 {
   color: var(--primary-text-color);
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+}
+
 /* Header */
 
 header {
   background-color: var(--header-background-color);
 }
 
+.page-header .nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.all-nav {
+  display: flex;
+  align-items: center;
+}
+
 /* Logo */
 
 .logo {
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -53,6 +89,15 @@ header {
 
 /* Site nav */
 
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
 .site-nav .link {
   color: var(--primary-text-color);
 }
@@ -68,8 +113,21 @@ header {
 
 /* Contacts container */
 
+.contacts-container {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-container .item + .item {
+  margin-left: 50px;
+}
+
 .contacts-container .contacts-link,
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -85,26 +143,21 @@ header {
   color: var(--accent-color);
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 /* Hero */
 
 .hero-studio {
   background-color: var(--dark-background-color);
+  text-align: center;
 }
 
 .hero-studio .main-caption {
+  margin-left: auto;
+  margin-right: auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
 
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 

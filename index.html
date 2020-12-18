@@ -12,96 +12,109 @@
 </head>
 <body>
     <!-- Шапка сайта -->
-    <header>
-        <nav>
-            <a class="logo" lang="en" href="./index.html">Web<span class="logo-header">Studio</span></a>
-            <ul class="site-nav">
-              <li><a class="link current" href="./index.html">Студия</a></li>
-              <li><a class="link" href="./portfolio.html">Портфолио</a></li>
-              <li><a class="link" href="#">Контакты</a></li>
-            </ul>
-        </nav>
+    <header class="page-header">
+        <div class="container nav-header">
+            <nav class="all-nav">
+               <a class="logo" lang="en" href="./index.html">Web<span class="logo-header">Studio</span></a>
+                <ul class="site-nav">
+                  <li class="item"><a class="link current" href="./index.html">Студия</a></li>
+                  <li class="item"><a class="link" href="./portfolio.html">Портфолио</a></li>
+                  <li class="item"><a class="link" href="#">Контакты</a></li>
+               </ul>
+            </nav>
             <ul class="contacts-container">
-              <li><a class="contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-              <li><a class="contacts-link" href="tel:380961111111">+38 096 111 11 11</a></li>
+              <li class="item"><a class="contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+              <li class="item"><a class="contacts-link" href="tel:380961111111">+38 096 111 11 11</a></li>
             </ul>
+        </div>
     </header>
     <main>
         <!-- Герой -->
         <section class="hero-studio">
-            <h1 class="main-caption">
-                Эффективные решения для вашего бизнеса
-            </h1>
-            <button class="button" type="button">Заказать услугу</button>
+            <div class="container">
+                <h1 class="main-caption">
+                   Эффективные решения<br> для вашего бизнеса
+                </h1>
+               <button class="button" type="button">Заказать услугу</button>
+            </div>
         </section>
         <!-- Наши качества -->
         <section class="section-quality">
-            <h2 >Наши качества</h2>
-            <ul >
-                <li>
-                    <h3 class="quality-caption">Внимание к деталям</h3>
-                    <p class="text-quality">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
-                </li>
-                <li>
-                    <h3 class="quality-caption">Пунктуальность</h3>
-                    <p class="text-quality">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
-                </li>
-                <li>
-                    <h3 class="quality-caption">Планирование</h3>
-                    <p class="text-quality">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
-                </li>
-                <li>
-                    <h3 class="quality-caption">Современные технологии</h3>
-                    <p class="text-quality">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
-                </li>
-            </ul>
+            <div class="container">
+                <h2>Наши качества</h2>
+                <ul>
+                    <li>
+                        <h3 class="quality-caption">Внимание к деталям</h3>
+                        <p class="text-quality">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+                    </li>
+                    <li>
+                        <h3 class="quality-caption">Пунктуальность</h3>
+                        <p class="text-quality">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+                    </li>
+                    <li>
+                        <h3 class="quality-caption">Планирование</h3>
+                        <p class="text-quality">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+                    </li>
+                    <li>
+                        <h3 class="quality-caption">Современные технологии</h3>
+                        <p class="text-quality">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+                    </li>
+                </ul>
+            </div>
         </section>
         <!-- Чем занимаемся -->
         <section class="section-foto">
-            <h2>Чем мы занимаемся</h2>
-            <ul>
-                <li><a href="#"><img src="./image/pc.jpg" 
-                    alt="человек печатает с планшета" width="370"></a>
-                </li>
-                <li><a href="#"><img src="./image/laptop.jpg" 
-                    alt="человек смотрит в ноутбук и держит телефон в руке" width="370"></a>
-                </li>
-                <li><a href="#"><img src="./image/tablet.jpg" 
-                    alt="человек держит планшет на котором изображен цветовой спектр" width="370"></a>
-                </li>
-            </ul>           
+            <div class="container">
+                <h2>Чем мы занимаемся</h2>
+                <ul>
+                    <li><a href="#"><img src="./image/pc.jpg" alt="человек печатает с планшета" width="370"></a>
+                    </li>
+                    <li><a href="#"><img src="./image/laptop.jpg" alt="человек смотрит в ноутбук и держит телефон в руке"
+                                width="370"></a>
+                    </li>
+                    <li><a href="#"><img src="./image/tablet.jpg" alt="человек держит планшет на котором изображен цветовой спектр"
+                                width="370"></a>
+                    </li>
+                </ul>
+            </div>
         </section>
         <!-- Наша команда -->
         <section class="section-command">
-            <h2>Наша команда</h2>
-            <ul>
-                <li><img src="./image/igor.jpg" alt="мужчина в коричневой рубашке" width="270">
-                    <h3 class="command-caption">Игорь Демьяненко</h3>
-                    <p class="text-command" lang="en">Product Designer</p>
-                </li>
-                <li><img src="./image/olga.jpg" alt="девушка блондинка в черном пиджаке" width="270">
-                    <h3 class="command-caption">Ольга Репина</h3>
-                    <p class="text-command" lang="en">Frontend Developer</p>
-                </li>
-                <li><img src="./image/nikolaj.jpg" alt="мужчина в голубой рубашке" width="270">
-                    <h3 class="command-caption">Николай Тарасов</h3>
-                    <p class="text-command" lang="en">Marketing</p>
-                </li>
-                <li><img src="./image/mikhail.jpg" alt="мужчина в черной футболке" width="270">
-                    <h3 class="command-caption">Михаил Ермаков</h3>
-                    <p class="text-command" lang="en">UI Designer</p>
-                </li>
-            </ul>
+            <div class="container">
+                <h2>Наша команда</h2>
+                <ul>
+                    <li><img src="./image/igor.jpg" alt="мужчина в коричневой рубашке" width="270">
+                        <h3 class="command-caption">Игорь Демьяненко</h3>
+                        <p class="text-command" lang="en">Product Designer</p>
+                    </li>
+                    <li><img src="./image/olga.jpg" alt="девушка блондинка в черном пиджаке" width="270">
+                        <h3 class="command-caption">Ольга Репина</h3>
+                        <p class="text-command" lang="en">Frontend Developer</p>
+                    </li>
+                    <li><img src="./image/nikolaj.jpg" alt="мужчина в голубой рубашке" width="270">
+                        <h3 class="command-caption">Николай Тарасов</h3>
+                        <p class="text-command" lang="en">Marketing</p>
+                    </li>
+                    <li><img src="./image/mikhail.jpg" alt="мужчина в черной футболке" width="270">
+                        <h3 class="command-caption">Михаил Ермаков</h3>
+                        <p class="text-command" lang="en">UI Designer</p>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     <!-- Адресные данные -->
     <footer>
-           <a class="logo" lang="en" href="index.html">Web<span class="logo-footer">Studio</span></a>
-           <ul>
-               <li><address class="text-address">г. Киев, пр-т Леси Украинки, 26</address></li> 
-               <li><a class="contacts-footer" href="mailto:info@example.com">info@example.com</a></li>
-               <li><a class="contacts-footer" href="tel:380991111111">+38 096 111 11 11</a></li>
-           </ul>  
+        <div class="container">
+            <a class="logo" lang="en" href="index.html">Web<span class="logo-footer">Studio</span></a>
+            <ul>
+                <li>
+                    <address class="text-address">г. Киев, пр-т Леси Украинки, 26</address>
+                </li>
+                <li><a class="contacts-footer" href="mailto:info@example.com">info@example.com</a></li>
+                <li><a class="contacts-footer" href="tel:380991111111">+38 096 111 11 11</a></li>
+            </ul>
+        </div>  
     </footer>   
 </body>
 </html>
