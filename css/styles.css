@@ -12,7 +12,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--main-background-color);
+  background-color: var(--header-background-color);
 }
 
 li {
@@ -168,10 +168,18 @@ header {
   padding-bottom: 200px;
 }
 
-.hero-studio .main-caption {
+.hero-studio .hero-title {
+  max-width: 696px;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+}
+
+.hero-studio .main-caption {
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px; */
 
   font-weight: 900;
   font-size: 44px;
