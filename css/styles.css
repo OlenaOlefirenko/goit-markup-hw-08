@@ -3,6 +3,7 @@
   --header-background-color: #ffffff;
   --sec-background-color: #f5f4fa;
   --dark-background-color: #2f303a;
+  --hero-background-color: #c4c4c4;
 
   --primary-text-color: #212121;
   --sec-text-color: #757575;
@@ -140,9 +141,10 @@ header {
 
 .contacts-container .contacts-link,
 .site-nav .link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 
   font-weight: 500;
   font-size: 14px;
@@ -157,43 +159,43 @@ header {
 .contacts-container .contacts-link:hover,
 .contacts-container .contacts-link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
-
+.icon-mail,
+.icon-tel {
+  margin-right: 10px;
+  fill: currentColor;
+}
 /* Hero */
 
 .overlay {
   max-width: 1600px;
   height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image:linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-  ), url("../image/developers.jpg");
+  margin: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../image/developers.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-image: linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4),
-    url(../image/developers.jpg*),
-    background-color: #c4c4c4
-  );
-  /* background-repeat: no-repeat;
-  background-position: center;
-  bcckground-size: cover; */ */
 }
 
 .hero-studio {
-  /* background-color: #c4c4c4; */
+  padding: 0;
+
+  background-color: var(--hero-background-color);
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  /* padding-top: 200px;
+  padding-bottom: 200px; */
 }
 
 .hero-studio .hero-title {
-  max-width: 696px;
-  text-align: center;
+  width: 696px;
+  /* text-align: center; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -274,6 +276,25 @@ header {
   color: var(--sec-text-color);
 }
 
+.feature {
+  display: flex;
+  margin-bottom: 30px;
+  /* align-items: center;
+  justify-content: center; */
+  padding: 25px 100px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.feature .icon-feature {
+  width: 70px;
+  height: 70px;
+  /* margin: auto; */
+  /* padding: 25px 100px; */
+  /* align-items: center; */
+  fill: currentColor;
+}
+
 /* Work */
 
 .section-photo {
@@ -309,8 +330,9 @@ header {
 
 .section-command .item {
   border-radius: 0px 0px 4px 4px;
-
   background-color: var(--header-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .section-command .item + .item {
