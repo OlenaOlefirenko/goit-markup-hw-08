@@ -10,6 +10,9 @@
   --white-text-color: #ffffff;
   --accent-color: #2196f3;
   --link-color: #afb1b8;
+
+  --function-duration: 250ms;
+  --function-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -116,17 +119,33 @@ header {
   margin-left: 50px;
 }
 
-.site-nav .link {
+.nav-link {
+  /* position: relative; */
   color: var(--primary-text-color);
+  transition: color var(--function-duration) var(--function-timing);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.current-link {
+  position: relative;
   color: var(--accent-color);
+}
+
+.current-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* Contacts container */
@@ -141,7 +160,7 @@ header {
 }
 
 .contacts-container .contacts-link,
-.site-nav .link {
+.site-nav .nav-link {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -155,6 +174,7 @@ header {
 
 .contacts-container .contacts-link {
   color: var(--sec-text-color);
+  transition: color var(--function-duration) var(--function-timing);
 }
 
 .contacts-container .contacts-link:hover,
@@ -382,6 +402,8 @@ header {
   height: 44px;
   border-radius: 50%;
   color: var(--link-color);
+  transition: background-color var(--function-duration) var(--function-timing),
+    color var(--function-duration) var(--function-timing);
 }
 
 .social-command .command-link:hover,
@@ -424,6 +446,8 @@ header {
   align-items: center;
   justify-content: center;
   color: var(--link-color);
+  transition: color var(--function-duration) var(--function-timing),
+    boder-color var(--function-duration) var(--function-timing);
 }
 
 .section-clients .item + .item {
@@ -469,12 +493,17 @@ header {
 
   color: var(--primary-text-color);
   background-color: var(--sec-background-color);
+
+  transition: background-color var(--function-duration) var(--function-timing),
+    color var(--function-duration) var(--function-timing);
 }
 
 .section-portfolio .button-filter:hover,
 .section-portfolio .button-filter:focus {
   color: var(--header-background-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-filter .item + .item {
@@ -585,6 +614,7 @@ footer {
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--function-duration) var(--function-timing);
 }
 
 .contacts-footer:hover,
@@ -639,12 +669,13 @@ footer {
   border-radius: 50%;
   color: var(--white-text-color);
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--function-duration) var(--function-timing);
 }
 
 .footer-link:hover,
 .footer-link:focus {
   background-color: var(--accent-color);
-  color: var(--white-text-color);
+  /* color: var(--white-text-color); */
   fill: currentColor;
 }
 
