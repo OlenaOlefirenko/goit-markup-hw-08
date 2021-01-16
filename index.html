@@ -43,7 +43,7 @@
                             Эффективные решения для вашего бизнеса
                     </h1>
                 </div>
-                    <button class="button" type="button">Заказать услугу</button>
+                    <button class="button" type="button" data-toggle-backdrop>Заказать услугу</button>
           </div>
         </section>
         <!-- Наши качества -->
@@ -319,5 +319,18 @@
             </ul>
         </div>
     </footer>   
+
+    <div class="backdrop" data-backdrop>
+        <div class="modal">
+           <button class="modal-button" data-toggle-backdrop>&#10006</button>
+        </div>
+    </div>
+
+    <script>
+        const backdrop = document.querySelector('[data-backdrop]')
+        const buttons = document.querySelectorAll('[data-toggle-backdrop]')
+        const toggleBackdrop = () => backdrop.classList.toggle('hidden')
+        buttons.forEach(button => button.addEventListener('click', toggleBackdrop))
+    </script>
 </body>
 </html>
