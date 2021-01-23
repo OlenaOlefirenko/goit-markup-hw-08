@@ -807,6 +807,7 @@ footer {
 
 .modal {
   position: absolute;
+  padding: 40px;
   width: 528px;
   height: 581px;
   left: 50%;
@@ -846,6 +847,50 @@ footer {
 
 .icon-modal {
   fill: currentColor;
+}
+
+.text-form {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.icon-form {
+  width: 18px;
+  height: 18px;
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.send-form {
+  display: inline-block;
+  align-items: center;
+  /* margin-left: 12px; */
+  padding: 10px 55px 10px 56px;
+  min-width: 200px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+
+  /* text-align: center; */
+  letter-spacing: 0.06em;
+
+  color: var(--header-background-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hidden {
