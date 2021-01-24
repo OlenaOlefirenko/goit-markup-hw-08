@@ -748,17 +748,12 @@ footer {
 
 .mailing {
   margin-left: auto;
-  /* width: 570px; */
 }
-/* .field-send {
-  width: 358px;
-} */
+
 .email-input {
   width: 354px;
   padding: 15px 16px;
-  /* padding-right: 16px;
-  padding-bottom: 15px;
-  padding-left: 16px; */
+
   font: inherit;
   color: var(--white-text-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -781,8 +776,6 @@ footer {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-
-  /* text-align: center; */
   letter-spacing: 0.06em;
 
   color: var(--header-background-color);
@@ -794,6 +787,9 @@ footer {
   margin-left: 10px;
   fill: currentColor;
 }
+
+/* Modal window */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -809,7 +805,7 @@ footer {
   position: absolute;
   padding: 40px;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -839,7 +835,6 @@ footer {
   transition: color var(--function-duration) var(--function-timing);
 }
 
-/* .modal-close:focus, */
 .modal-close:hover {
   color: var(--accent-color);
   fill: currentColor;
@@ -860,32 +855,122 @@ footer {
   color: var(--primary-text-color);
 }
 
+.input-container {
+  position: relative;
+}
+
 .icon-form {
+  position: absolute;
   width: 18px;
   height: 18px;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--primary-text-color);
 }
 
 .form-field {
   display: block;
   margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--sec-text-color);
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-input:focus,
+.feedback:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.form-input:focus + .icon-form {
+  fill: var(--accent-color);
+}
+
+.feedback {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.feedback::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.name {
+  margin-bottom: 4px;
+}
+
+.form-checkbox {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.old-checkbox:checked ~ .checkbox-icon {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url('../image/check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  fill: currentColor;
+}
+
+.agree {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: var(--sec-text-color);
+}
+
+.contract-link {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.checkbox-icon {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 4px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .send-form {
-  display: inline-block;
-  align-items: center;
-  /* margin-left: 12px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 55px 10px 56px;
   min-width: 200px;
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+  /* outline: none; */
 
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-
-  /* text-align: center; */
   letter-spacing: 0.06em;
 
   color: var(--header-background-color);
