@@ -1,0 +1,132 @@
+.text-form {
+  margin-bottom: 12px;
+  font-weight: $bold-font-weight;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+}
+
+.input-container {
+  position: relative;
+}
+
+.icon-form {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: $primary-text-color;
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  color: $sec-text-color;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-input:focus,
+.feedback:focus {
+  outline: none;
+  border-color: $accent-color;
+}
+
+.form-input:focus + .icon-form {
+  fill: $accent-color;
+}
+
+.feedback {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.feedback::placeholder {
+  font-size: $text-font-size;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.name {
+  margin-bottom: 4px;
+}
+
+.form-checkbox {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.old-checkbox:checked ~ .checkbox-icon {
+  border-color: $accent-color;
+  background-color: $accent-color;
+  background-image: url('../image/check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  fill: currentColor;
+}
+
+.agree {
+  font-size: $text-font-size;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: $sec-text-color;
+}
+
+.contract-link {
+  text-decoration: underline;
+  color: $accent-color;
+}
+
+.checkbox-icon {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $primary-text-color;
+  border-radius: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.send-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px 10px 56px;
+  min-width: 200px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: $bold-font-weight;
+  font-size: $sectext-font-size;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  color: $header-background-color;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

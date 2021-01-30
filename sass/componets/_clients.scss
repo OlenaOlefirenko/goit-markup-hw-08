@@ -1,0 +1,39 @@
+.section-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-clients .clients-list {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.section-clients .icon-clients {
+  fill: currentColor;
+}
+
+.link-clients {
+  display: inline-flex;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  align-items: center;
+  justify-content: center;
+  color: $link-color;
+  transition: color $function-duration $function-timing,
+    boder-color $function-duration $function-timing;
+}
+
+.section-clients .clients-item + .clients-item {
+  margin-left: 30px;
+}
+
+.link-clients:hover,
+.link-clients:focus {
+  border-color: $accent-color;
+  color: $accent-color;
+  fill: currentColor;
+}

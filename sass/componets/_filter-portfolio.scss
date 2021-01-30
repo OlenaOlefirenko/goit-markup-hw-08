@@ -1,0 +1,41 @@
+.section-portfolio .filter-list {
+  display: flex;
+}
+
+.filter-list.center {
+  justify-content: center;
+}
+.section-portfolio .button-filter {
+  display: inline-block;
+  margin-bottom: 50px;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: $sectext-font-size;
+  line-height: 1.63;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+  background-color: $sec-background-color;
+
+  transition: background-color $function-duration $function-timing,
+    color $function-duration $function-timing;
+}
+
+.section-portfolio .button-filter:hover,
+.section-portfolio .button-filter:focus {
+  color: $header-background-color;
+  background-color: $accent-color;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter-list .filter-item + .filter-item {
+  margin-left: 8px;
+}

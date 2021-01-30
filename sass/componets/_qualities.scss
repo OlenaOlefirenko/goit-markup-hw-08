@@ -1,0 +1,51 @@
+.section-quality {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-quality .quality-list {
+  display: flex;
+}
+
+.quality-list .quality-item + .quality-item {
+  margin-left: 30px;
+}
+
+.quality-list .quality-item {
+  width: 270px;
+}
+
+.section-quality .quality-caption {
+  margin-bottom: 10px;
+
+  font-weight: $bold-font-weight;
+  font-size: $text-font-size;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primary-text-color;
+}
+
+.section-quality .text-quality {
+  font-size: $text-font-size;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: $sec-text-color;
+}
+
+.feature {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.feature .icon-feature {
+  width: 70px;
+  height: 70px;
+  fill: currentColor;
+}

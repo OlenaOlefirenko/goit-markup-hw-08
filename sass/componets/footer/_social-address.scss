@@ -1,0 +1,50 @@
+.social-address {
+  width: 206px;
+  margin-left: 70px;
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+
+.footer-list {
+  display: flex;
+}
+
+.text-footer {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: $bold-font-weight;
+  font-size: $text-font-size;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $white-text-color;
+}
+
+.social-address .footer-item + .footer-item {
+  margin-left: 10px;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $white-text-color;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color $function-duration $function-timing;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: $accent-color;
+  fill: currentColor;
+}
+
+.icon-footer {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

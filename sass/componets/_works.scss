@@ -1,0 +1,42 @@
+.section-work {
+  padding-bottom: 94px;
+}
+
+.section-work .work-list {
+  display: flex;
+  margin-top: 50px;
+}
+
+.work-list .work-item + .work-item {
+  margin-left: 30px;
+}
+
+.work-list .works {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.work-list .work-thumb {
+  position: relative;
+}
+
+.work-list .work-label {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-weight: $bold-font-weight;
+  font-size: $text-font-size;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $white-text-color;
+  background: rgba(47, 48, 58, 0.8);
+}
