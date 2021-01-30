@@ -1,0 +1,16 @@
+header {
+  background-color: $header-background-color;
+}
+
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+.page-header .nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.all-nav {
+  display: flex;
+  align-items: center;
+}

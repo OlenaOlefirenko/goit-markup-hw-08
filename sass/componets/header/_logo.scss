@@ -1,0 +1,19 @@
+.logo {
+  display: block;
+
+  font-family: $sec-font-family;
+  font-weight: $bold-font-weight;
+  font-size: 26px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+  color: $accent-color;
+}
+
+.logo-header {
+  color: #000000;
+}
+
+.logo-footer {
+  color: $white-text-color;
+}
