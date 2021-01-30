@@ -1,0 +1,25 @@
+body {
+  font-family: $main-font-family;
+  background-color: $header-background-color;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-inline-start: 0;
+}

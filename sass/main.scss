@@ -1,55 +1,7 @@
-:root {
-  --main-background-color: #e5e5e5;
-  --header-background-color: #ffffff;
-  --sec-background-color: #f5f4fa;
-  --dark-background-color: #2f303a;
-  --hero-background-color: #c4c4c4;
-
-  --primary-text-color: #212121;
-  --sec-text-color: #757575;
-  --white-text-color: #ffffff;
-  --accent-color: #2196f3;
-  --link-color: #afb1b8;
-
-  --function-duration: 250ms;
-  --function-timing: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--header-background-color);
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-ul,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul {
-  padding-inline-start: 0;
-}
-
-h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--primary-text-color);
-}
+@import './utils/variables';
+@import './base/normalize';
+@import './base/defaults';
+@import './componets/header/contacts-container';
 
 .visually-hidden {
   position: absolute;
@@ -67,10 +19,20 @@ h2 {
   padding-right: 15px;
 }
 
+.subtitle {
+  font-weight: $bold-font-weight;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+}
+
 /* Header */
 
 header {
-  background-color: var(--header-background-color);
+  background-color: $header-background-color;
 }
 
 .page-header {
@@ -91,13 +53,13 @@ header {
 .logo {
   display: block;
 
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+  font-family: $sec-font-family;
+  font-weight: $bold-font-weight;
   font-size: 26px;
   line-height: 1.19;
 
   letter-spacing: 0.03em;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .logo-header {
@@ -105,7 +67,7 @@ header {
 }
 
 .logo-footer {
-  color: var(--white-text-color);
+  color: $white-text-color;
 }
 
 /* Site nav */
@@ -121,18 +83,18 @@ header {
 
 .nav-link {
   /* position: relative; */
-  color: var(--primary-text-color);
-  transition: color var(--function-duration) var(--function-timing);
+  color: $primary-text-color;
+  transition: color $function-duration $function-timing;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .current-link {
   position: relative;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .current-link::after {
@@ -145,7 +107,7 @@ header {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--accent-color);
+  background-color: $accent-color;
 }
 
 /* Contacts container */
@@ -167,20 +129,20 @@ header {
   align-items: center;
 
   font-weight: 500;
-  font-size: 14px;
+  font-size: $text-font-size;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
 .contacts-container .contacts-link {
-  color: var(--sec-text-color);
-  transition: color var(--function-duration) var(--function-timing);
+  color: $sec-text-color;
+  transition: color $function-duration $function-timing;
 }
 
 .contacts-container .contacts-link:hover,
 .contacts-container .contacts-link:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
+  color: $accent-color;
+  fill: $accent-color;
 }
 .icon-mail,
 .icon-tel {
@@ -209,7 +171,7 @@ header {
 .hero-studio {
   padding: 0;
 
-  background-color: var(--hero-background-color);
+  background-color: $hero-background-color;
   text-align: center;
 }
 
@@ -228,7 +190,7 @@ header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  color: var(--header-background-color);
+  color: $header-background-color;
 }
 
 .hero-studio .hero-button {
@@ -240,15 +202,15 @@ header {
   cursor: pointer;
 
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: $bold-font-weight;
+  font-size: $sectext-font-size;
   line-height: 1.9;
 
   text-align: center;
   letter-spacing: 0.06em;
 
-  color: var(--header-background-color);
-  background-color: var(--accent-color);
+  color: $header-background-color;
+  background-color: $accent-color;
 }
 
 /* Our qualities */
@@ -273,22 +235,22 @@ header {
 .section-quality .quality-caption {
   margin-bottom: 10px;
 
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: $bold-font-weight;
+  font-size: $text-font-size;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .section-quality .text-quality {
-  font-size: 14px;
+  font-size: $text-font-size;
   line-height: 1.71;
 
   letter-spacing: 0.03em;
 
-  color: var(--sec-text-color);
+  color: $sec-text-color;
 }
 
 .feature {
@@ -339,14 +301,14 @@ header {
   padding-top: 27px;
   padding-bottom: 27px;
 
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: $bold-font-weight;
+  font-size: $text-font-size;
   line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--white-text-color);
+  color: $white-text-color;
   background: rgba(47, 48, 58, 0.8);
 }
 
@@ -361,12 +323,12 @@ header {
   padding-top: 94px;
   padding-bottom: 94px;
 
-  background-color: var(--sec-background-color);
+  background-color: $sec-background-color;
 }
 
 .section-command .command-item {
   border-radius: 0px 0px 4px 4px;
-  background-color: var(--header-background-color);
+  background-color: $header-background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -387,25 +349,25 @@ header {
   margin-bottom: 10px;
 
   font-weight: 500;
-  font-size: 16px;
+  font-size: $sectext-font-size;
   line-height: 1.19;
   text-align: center;
 
   letter-spacing: 0.03em;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .section-command .text-command {
   margin-bottom: 16px;
 
-  font-size: 16px;
+  font-size: $sectext-font-size;
   line-height: 1.19;
   text-align: center;
 
   letter-spacing: 0.03em;
 
-  color: var(--sec-text-color);
+  color: $sec-text-color;
 }
 
 .social-list {
@@ -425,15 +387,15 @@ header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--link-color);
-  transition: background-color var(--function-duration) var(--function-timing),
-    color var(--function-duration) var(--function-timing);
+  color: $link-color;
+  transition: background-color $function-duration $function-timing,
+    color $function-duration $function-timing;
 }
 
 .social-list .command-link:hover,
 .social-list .command-link:focus {
-  background-color: var(--accent-color);
-  color: var(--white-text-color);
+  background-color: $accent-color;
+  color: $white-text-color;
   fill: currentColor;
 }
 
@@ -469,9 +431,9 @@ header {
 
   align-items: center;
   justify-content: center;
-  color: var(--link-color);
-  transition: color var(--function-duration) var(--function-timing),
-    boder-color var(--function-duration) var(--function-timing);
+  color: $link-color;
+  transition: color $function-duration $function-timing,
+    boder-color $function-duration $function-timing;
 }
 
 .section-clients .clients-item + .clients-item {
@@ -480,8 +442,8 @@ header {
 
 .link-clients:hover,
 .link-clients:focus {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+  border-color: $accent-color;
+  color: $accent-color;
   fill: currentColor;
 }
 
@@ -509,23 +471,23 @@ header {
 
   font-family: inherit;
   font-weight: 500;
-  font-size: 16px;
+  font-size: $sectext-font-size;
   line-height: 1.63;
 
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--primary-text-color);
-  background-color: var(--sec-background-color);
+  color: $primary-text-color;
+  background-color: $sec-background-color;
 
-  transition: background-color var(--function-duration) var(--function-timing),
-    color var(--function-duration) var(--function-timing);
+  transition: background-color $function-duration $function-timing,
+    color $function-duration $function-timing;
 }
 
 .section-portfolio .button-filter:hover,
 .section-portfolio .button-filter:focus {
-  color: var(--header-background-color);
-  background-color: var(--accent-color);
+  color: $header-background-color;
+  background-color: $accent-color;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -582,18 +544,18 @@ header {
   /* opacity: 0.5; */
 
   transform: translatey(100%);
-  transition: transform var(--function-duration) var(--function-timing);
+  transition: transform $function-duration $function-timing;
 }
 
 .text-overlay {
   padding: 63px 24px;
-  font-family: Roboto;
-  font-weight: normal;
+  // font-family: Roboto;
+  //   font-weight: normal;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
 
-  color: var(--white-text-color);
+  color: $white-text-color;
 }
 
 .list-project .project-item:hover .project-overlay {
@@ -602,7 +564,7 @@ header {
 
 .link-project {
   display: block;
-  transition: box-shadow var(--function-duration) var(--function-timing);
+  transition: box-shadow $function-duration $function-timing;
 }
 
 .link-project:hover,
@@ -615,22 +577,22 @@ header {
 
 .section-portfolio .caption-project {
   margin-bottom: 4px;
-  font-weight: 700;
+  font-weight: $bold-font-weight;
   font-size: 18px;
   line-height: 2;
 
   letter-spacing: 0.06em;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .section-portfolio .text-project {
-  font-size: 16px;
+  font-size: $sectext-font-size;
   line-height: 1.9;
 
   letter-spacing: 0.03em;
 
-  color: var(--sec-text-color);
+  color: $sec-text-color;
 }
 
 .list-project .text-border {
@@ -643,7 +605,7 @@ header {
 /* Footer */
 
 footer {
-  background-color: var(--dark-background-color);
+  background-color: $dark-background-color;
 }
 
 .footer-list {
@@ -670,29 +632,29 @@ footer {
 }
 .contacts-footer {
   display: block;
-  font-size: 14px;
+  font-size: $text-font-size;
   line-height: 1.71;
 
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
-  transition: color var(--function-duration) var(--function-timing);
+  transition: color $function-duration $function-timing;
 }
 
 .contacts-footer:hover,
 .contacts-footer:focus {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .text-address {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+  //   font-weight: 400;
+  font-size: $text-font-size;
   line-height: 1.71;
 
   letter-spacing: 0.03em;
 
-  color: var(--header-background-color);
+  color: $header-background-color;
 }
 
 .social-address {
@@ -709,13 +671,13 @@ footer {
 .text-footer {
   margin-bottom: 20px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: $bold-font-weight;
+  font-size: $text-font-size;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--white-text-color);
+  color: $white-text-color;
 }
 
 .social-address .footer-item + .footer-item {
@@ -729,14 +691,14 @@ footer {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--white-text-color);
+  color: $white-text-color;
   background: rgba(255, 255, 255, 0.1);
-  transition: background-color var(--function-duration) var(--function-timing);
+  transition: background-color $function-duration $function-timing;
 }
 
 .footer-link:hover,
 .footer-link:focus {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   fill: currentColor;
 }
 
@@ -755,7 +717,7 @@ footer {
   padding: 15px 16px;
 
   font: inherit;
-  color: var(--white-text-color);
+  color: $white-text-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: inherit;
@@ -773,13 +735,13 @@ footer {
   cursor: pointer;
 
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: $bold-font-weight;
+  font-size: $sectext-font-size;
   line-height: 1.9;
   letter-spacing: 0.06em;
 
-  color: var(--header-background-color);
-  background-color: var(--accent-color);
+  color: $header-background-color;
+  background-color: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -798,7 +760,7 @@ footer {
   bottom: 0;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity var(--function-duration) var(--function-timing);
+  transition: opacity $function-duration $function-timing;
 }
 
 .modal {
@@ -809,11 +771,11 @@ footer {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  background-color: var(--header-background-color);
+  background-color: $header-background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform var(--function-duration) var(--function-timing);
+  transition: transform $function-duration $function-timing;
 }
 
 .backdrop.hidden .modal {
@@ -830,13 +792,13 @@ footer {
   margin-right: 8px;
   cursor: pointer;
   border-radius: 50%;
-  background: var(--header-background-color);
+  background: $header-background-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: color var(--function-duration) var(--function-timing);
+  transition: color $function-duration $function-timing;
 }
 
 .modal-close:hover {
-  color: var(--accent-color);
+  color: $accent-color;
   fill: currentColor;
 }
 
@@ -846,13 +808,13 @@ footer {
 
 .text-form {
   margin-bottom: 12px;
-  font-weight: 700;
+  font-weight: $bold-font-weight;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .input-container {
@@ -866,7 +828,7 @@ footer {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  fill: var(--primary-text-color);
+  fill: $primary-text-color;
 }
 
 .form-field {
@@ -874,7 +836,7 @@ footer {
   margin-bottom: 10px;
   font-family: inherit;
   font-size: 12px;
-  color: var(--sec-text-color);
+  color: $sec-text-color;
 }
 
 .form-input {
@@ -887,11 +849,11 @@ footer {
 .form-input:focus,
 .feedback:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: $accent-color;
 }
 
 .form-input:focus + .icon-form {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .feedback {
@@ -905,7 +867,7 @@ footer {
 }
 
 .feedback::placeholder {
-  font-size: 14px;
+  font-size: $text-font-size;
   line-height: 1.14;
   letter-spacing: 0.01em;
 
@@ -923,8 +885,8 @@ footer {
 }
 
 .old-checkbox:checked ~ .checkbox-icon {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
+  border-color: $accent-color;
+  background-color: $accent-color;
   background-image: url('../image/check.svg');
   background-size: contain;
   background-origin: border-box;
@@ -932,17 +894,17 @@ footer {
 }
 
 .agree {
-  font-size: 14px;
+  font-size: $text-font-size;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: center;
 
-  color: var(--sec-text-color);
+  color: $sec-text-color;
 }
 
 .contract-link {
   text-decoration: underline;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .checkbox-icon {
@@ -950,7 +912,7 @@ footer {
   display: block;
   width: 16px;
   height: 15px;
-  border: 2px solid var(--primary-text-color);
+  border: 2px solid $primary-text-color;
   border-radius: 4px;
   top: 50%;
   transform: translateY(-50%);
@@ -968,13 +930,13 @@ footer {
   /* outline: none; */
 
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: $bold-font-weight;
+  font-size: $sectext-font-size;
   line-height: 1.9;
   letter-spacing: 0.06em;
 
-  color: var(--header-background-color);
-  background-color: var(--accent-color);
+  color: $header-background-color;
+  background-color: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
