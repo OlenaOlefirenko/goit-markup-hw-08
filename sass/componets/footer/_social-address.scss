@@ -35,12 +35,12 @@
   color: $white-text-color;
   background: rgba(255, 255, 255, 0.1);
   transition: background-color $function-duration $function-timing;
-}
 
-.footer-link:hover,
-.footer-link:focus {
-  background-color: $accent-color;
-  fill: currentColor;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: currentColor;
+  }
 }
 
 .icon-footer {

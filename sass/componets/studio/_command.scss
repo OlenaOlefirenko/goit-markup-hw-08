@@ -1,13 +1,13 @@
-.section-command .command-list {
-  display: flex;
-  margin-top: 50px;
-}
-
 .section-command {
   padding-top: 94px;
   padding-bottom: 94px;
 
   background-color: $sec-background-color;
+}
+
+.section-command .command-list {
+  display: flex;
+  margin-top: 50px;
 }
 
 .section-command .command-item {
@@ -74,13 +74,13 @@
   color: $link-color;
   transition: background-color $function-duration $function-timing,
     color $function-duration $function-timing;
-}
 
-.social-list .command-link:hover,
-.social-list .command-link:focus {
-  background-color: $accent-color;
-  color: $white-text-color;
-  fill: currentColor;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-text-color;
+    fill: currentColor;
+  }
 }
 
 .icon-command {

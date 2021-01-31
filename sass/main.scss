@@ -1,27 +1,13 @@
-@import './utils/variables';
 @import './base/normalize';
+@import './utils/variables';
 @import './base/defaults';
 @import './componets/visually-hidden';
 @import './componets/container';
 @import './componets/subtitle';
-@import './componets/header/page-header';
-@import './componets/header/logo';
-@import './componets/header/site-nav';
-@import './componets/header/contacts-container';
-@import './componets/hero';
-@import './componets/qualities';
-@import './componets/works';
-@import './componets/command';
-@import './componets/clients';
-@import './componets/footer/container-footer';
-@import './componets/footer/contacts-footer';
-@import './componets/footer/logo-footer';
-@import './componets/footer/social-address';
-@import './componets/footer/mailing';
-@import './componets/modal-window/backdrop';
-@import './componets/modal-window/modal';
-@import './componets/modal-window/form-modal';
-@import './componets/modal-window/hidden-modal';
+@import './componets/header/main.scss';
+@import './componets/studio/main.scss';
+@import './componets/footer/main.scss';
+@import './componets/modal-window/main.scss';
 
 // .visually-hidden {
 //   position: absolute;

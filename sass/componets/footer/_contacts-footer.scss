@@ -4,17 +4,10 @@
   padding-bottom: 60px;
 }
 
-.list-address {
-  display: block;
-}
-
-// .address .logo {
-//   margin-bottom: 20px;
-// }
-
 .list-address .address-item:not(:last-child) {
   margin-bottom: 9px;
 }
+
 .contacts-footer {
   display: block;
   font-size: $text-font-size;
@@ -24,16 +17,15 @@
 
   color: rgba(255, 255, 255, 0.6);
   transition: color $function-duration $function-timing;
-}
 
-.contacts-footer:hover,
-.contacts-footer:focus {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .text-address {
   font-style: normal;
-  //   font-weight: 400;
   font-size: $text-font-size;
   line-height: 1.71;
 

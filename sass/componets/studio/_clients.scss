@@ -25,15 +25,15 @@
   color: $link-color;
   transition: color $function-duration $function-timing,
     boder-color $function-duration $function-timing;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+    fill: currentColor;
+  }
 }
 
 .section-clients .clients-item + .clients-item {
   margin-left: 30px;
-}
-
-.link-clients:hover,
-.link-clients:focus {
-  border-color: $accent-color;
-  color: $accent-color;
-  fill: currentColor;
 }

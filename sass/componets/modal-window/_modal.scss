@@ -30,11 +30,11 @@
   background: $header-background-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: color $function-duration $function-timing;
-}
 
-.modal-close:hover {
-  color: $accent-color;
-  fill: currentColor;
+  &:hover {
+    color: $accent-color;
+    fill: currentColor;
+  }
 }
 
 .icon-modal {

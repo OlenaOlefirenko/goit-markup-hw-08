@@ -23,13 +23,14 @@
 .contacts-container .contacts-link {
   color: $sec-text-color;
   transition: color $function-duration $function-timing;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
 }
 
-.contacts-container .contacts-link:hover,
-.contacts-container .contacts-link:focus {
-  color: $accent-color;
-  fill: $accent-color;
-}
 .icon-mail,
 .icon-tel {
   margin-right: 10px;
