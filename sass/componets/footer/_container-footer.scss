@@ -1,6 +1,7 @@
 .section-footer {
   padding-top: 60px;
   padding-bottom: 60px;
+
   background-color: $dark-background-color;
 }
 
@@ -10,8 +11,28 @@
 //   align-items: baseline;
 //   // }
 // }
-.footer-items {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.footer-page {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  // display: block;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+.address-page {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 60px;
+    // margin-right: auto;
+    // margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+    margin-bottom: 0;
+  }
 }
