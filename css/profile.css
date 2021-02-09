@@ -347,9 +347,20 @@ ul {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 header {
@@ -622,23 +633,23 @@ header {
   border-left: 1px solid #eeeeee;
 }
 
-footer {
+.section-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2f303a;
 }
 
-.footer-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+.footer-items {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .address {
-  width: 231px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 .list-address .address-item:not(:last-child) {
@@ -676,16 +687,20 @@ footer {
 }
 
 .social-address {
-  width: 206px;
-  margin-left: 70px;
-  padding-top: 72px;
-  padding-bottom: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 .footer-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .text-footer {
@@ -734,11 +749,11 @@ footer {
 }
 
 .mailing {
-  margin-left: auto;
+  text-align: center;
 }
 
 .email-input {
-  width: 354px;
+  margin-bottom: 20px;
   padding: 15px 16px;
   font: inherit;
   color: #ffffff;
@@ -750,9 +765,7 @@ footer {
 }
 
 .send-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -771,6 +784,14 @@ footer {
   background-color: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 1200px) {
+  .send-button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
 }
 
 .icon-send {

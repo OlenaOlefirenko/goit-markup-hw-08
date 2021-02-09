@@ -1,19 +1,52 @@
 .section-quality {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-quality .quality-list {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
-.quality-list .quality-item + .quality-item {
-  margin-left: 30px;
+.quality-item {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
 }
 
-.quality-list .quality-item {
-  width: 270px;
-}
+// // @media screen and (min-width: 1200px) {
+// //   .quality-list .quality-item + .quality-item {
+// //     margin-left: 30px;
+
+//     // &: {
+//     //   width: 270px;
+//     // }
+//   }
+// }
 
 .section-quality .quality-caption {
   margin-bottom: 10px;
@@ -42,6 +75,7 @@
   padding: 25px 100px;
   background: #f5f4fa;
   border-radius: 4px;
+  justify-content: center;
 }
 
 .feature .icon-feature {

@@ -1,8 +1,17 @@
-footer {
+.section-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $dark-background-color;
 }
 
-.footer-list {
-  display: flex;
-  align-items: baseline;
+// .footer-items {
+//   // @media screen and (min-width: 768px) {
+//   display: flex;
+//   align-items: baseline;
+//   // }
+// }
+.footer-items {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

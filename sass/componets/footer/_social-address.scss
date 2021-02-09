@@ -1,12 +1,19 @@
 .social-address {
-  width: 206px;
-  margin-left: 70px;
-  padding-top: 72px;
-  padding-bottom: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  text-align: center;
+  // display: flex;
+  // width: 206px;
+  // margin-left: 70px;
+  // padding-top: 72px;
+  // padding-bottom: 100px;
 }
 
 .footer-list {
   display: flex;
+  justify-content: center;
 }
 
 .text-footer {
