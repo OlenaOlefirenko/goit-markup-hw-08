@@ -513,7 +513,7 @@ header {
   cursor: pointer;
 }
 
-.menu-button:hover {
+.menu-button:focus {
   color: #2196f3;
   fill: currentColor;
 }

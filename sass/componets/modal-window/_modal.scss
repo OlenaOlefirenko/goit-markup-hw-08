@@ -7,14 +7,16 @@
   border-radius: 4px;
   transition: transform $function-duration $function-timing;
 
-  @media screen and (max-width: 479px) {
-    height: 609px;
-    width: 450px;
-    overflow: scroll;
-  }
+  // @media screen and (max-width: 479px) {
+  //   height: 609px;
+  //   width: 450px;
+  //   overflow: scroll;
+  // }
 
-  @media screen and (min-width: 480px) width: 450px;
-  height: 609px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
   // padding: 40px;
   // transform: scale(1);
   // background-color: $header-background-color;

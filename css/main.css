@@ -529,7 +529,7 @@ header {
   cursor: pointer;
 }
 
-.menu-button:hover {
+.menu-button:focus {
   color: #2196f3;
   fill: currentColor;
 }
@@ -1217,8 +1217,6 @@ header {
 }
 
 .modal {
-  width: 450px;
-  height: 609px;
   padding: 40px;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1230,6 +1228,13 @@ header {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 @media screen and (min-width: 768px) {
