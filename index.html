@@ -28,7 +28,21 @@
                             <use href="./image/symbol-defs.svg#smartphone"></use>
                         </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button type="button" 
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button>
+                <svg class="icon-button" width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-close" href="./image/symbol-defs.svg#closenav"></use>
+                    <use class="icon-menu" href="./image/symbol-defs.svg#menunav"></use>
+                </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu>
+                ffffffff
+            </div>
         </div>
+        
     </header>
     <main>
         <!-- Герой -->
@@ -389,6 +403,24 @@
         </div>
         
     </div>
+
+    <script>
+          
+            (() => {
+                const menuBtnRef = document.querySelector("[data-menu-button]");
+                const mobileMenuRef = document.querySelector("[data-menu]");
+
+                menuBtnRef.addEventListener("click", () => {
+                    const expanded =
+                        menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+                    menuBtnRef.classList.toggle("is-open");
+                    menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+                    mobileMenuRef.classList.toggle("is-open");
+                });
+            })();
+    </script>
 
     <script>
         const backdrop = document.querySelector('[data-backdrop]')

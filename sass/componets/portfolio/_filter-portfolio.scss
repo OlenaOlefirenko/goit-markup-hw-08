@@ -1,10 +1,14 @@
 .section-portfolio .filter-list {
   display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    //
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
-.filter-list.center {
-  justify-content: center;
-}
 .section-portfolio .button-filter {
   display: inline-block;
   margin-bottom: 50px;

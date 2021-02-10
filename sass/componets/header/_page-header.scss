@@ -3,11 +3,14 @@ header {
 }
 
 .page-header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 .page-header .nav-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
 }
 
 .all-nav {

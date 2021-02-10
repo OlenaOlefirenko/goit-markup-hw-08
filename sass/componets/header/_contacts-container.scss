@@ -1,6 +1,10 @@
 .contacts-container {
-  display: flex;
-  margin-left: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .contacts-container .contacts-item + .contacts-item {

@@ -86,12 +86,18 @@
 }
 
 .agree {
-  font-size: $text-font-size;
+  margin-left: 24px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: center;
 
   color: $sec-text-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+    font-size: $text-font-size;
+  }
 }
 
 .contract-link {

@@ -1,0 +1,46 @@
+.menu-button {
+  display: inline-flex;
+  //   margin-top: 10px;
+  //   margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: $accent-color;
+    fill: currentColor;
+  }
+}
+
+.icon-button {
+  fill: currentColor;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 48px 40px;
+  background-color: $header-background-color;
+}
+
+.menu-container.is-open {
+  display: block;
+}
