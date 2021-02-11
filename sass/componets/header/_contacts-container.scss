@@ -6,8 +6,17 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
-    margin-left: auto;
-    margin-bottom: 0;
+    // align-items: center;
+    // margin-left: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row-reverse;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -18,9 +27,16 @@
     }
   }
 
+  @media screen and (min-width: 768px) {
+    &:not(:first-child) {
+      margin-bottom: 10px;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
-    &:not(:last-child) {
-      margin-right: 50px;
+    &:not(:first-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
     }
   }
 }
@@ -40,9 +56,12 @@
 }
 
 .contacts-container .contacts-link.mail {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
   // letter-spacing: 0.02em;
 }
 
@@ -54,7 +73,7 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: $text-font-size;
+    font-size: 12px;
     line-height: 1.14;
     // letter-spacing: 0.02em;
     // flex-direction: column-reverse;
@@ -62,8 +81,11 @@
 
   @media screen and (min-width: 1200px) {
     // display: flex;
+    // flex-direction: row;
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: $text-font-size;
+    // justify-content: center;
     // align-items: center;
 
     transition: color $function-duration $function-timing;
@@ -88,6 +110,24 @@
 //     }
 //   }
 // }
+.icon-mail {
+  width: 14px;
+  height: 10px;
+
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.icon-tel {
+  width: 10px;
+  height: 14px;
+
+  @media screen and (min-width: 1200px) {
+    height: 16px;
+  }
+}
 
 .icon-mail,
 .icon-tel {
@@ -98,6 +138,7 @@
     margin-right: 8px;
     fill: currentColor;
   }
+
   @media screen and (min-width: 1200px) {
     margin-right: 10px;
   }

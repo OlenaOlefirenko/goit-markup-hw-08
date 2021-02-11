@@ -402,7 +402,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 60px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .all-nav {
@@ -429,15 +431,16 @@ header {
 }
 
 .menu-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 }
 
 .menu-button:hover {
@@ -479,6 +482,7 @@ header {
     left: 0;
     width: 100%;
     padding: 48px 40px;
+    z-index: 1;
   }
   .menu-container.is-open {
     display: block;
@@ -490,6 +494,15 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -503,8 +516,14 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 93px;
+    margin-left: 88px;
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 93px;
   }
 }
 
@@ -556,7 +575,7 @@ header {
   .current-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     display: block;
     width: 100%;
@@ -580,8 +599,24 @@ header {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin-left: auto;
-    margin-bottom: 0;
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -591,9 +626,16 @@ header {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .contacts-container .contacts-item:not(:first-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .contacts-container .contacts-item:not(:last-child) {
-    margin-right: 50px;
+  .contacts-container .contacts-item:not(:first-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -607,10 +649,12 @@ header {
   }
 }
 
-.contacts-container .contacts-link.mail {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
+@media screen and (max-width: 767px) {
+  .contacts-container .contacts-link.mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 
 .contacts-container .contacts-link {
@@ -627,7 +671,7 @@ header {
         -ms-flex-align: center;
             align-items: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
   }
 }
@@ -636,12 +680,36 @@ header {
   .contacts-container .contacts-link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .contacts-container .contacts-link:hover, .contacts-container .contacts-link:focus {
     color: #2196f3;
     fill: #2196f3;
+  }
+}
+
+.icon-mail {
+  width: 14px;
+  height: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.icon-tel {
+  width: 10px;
+  height: 14px;
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-tel {
+    height: 16px;
   }
 }
 
@@ -1418,6 +1486,7 @@ header {
   right: 0;
   margin-top: 8px;
   margin-right: 8px;
+  padding: 6px;
   cursor: pointer;
   border-radius: 50%;
   background: #ffffff;
