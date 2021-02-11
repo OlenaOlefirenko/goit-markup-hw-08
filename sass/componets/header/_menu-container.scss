@@ -9,7 +9,7 @@
   cursor: pointer;
   z-index: 2;
 
-  &:hover {
+  &:active {
     color: $accent-color;
     fill: currentColor;
   }

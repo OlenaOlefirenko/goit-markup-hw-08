@@ -427,7 +427,7 @@ header {
   z-index: 2;
 }
 
-.menu-button:hover {
+.menu-button:active {
   color: #2196f3;
   fill: currentColor;
 }
