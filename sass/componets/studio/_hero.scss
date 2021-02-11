@@ -22,25 +22,33 @@
 }
 
 .hero-studio .hero-title {
-  width: 696px;
+  // width: 696px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+  }
 }
 
 .hero-studio .main-caption {
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
 
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   color: $header-background-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+  }
 }
 
 .hero-studio .hero-button {
   display: inline-block;
+  margin-top: 30px;
   padding: 10px 32px;
   min-width: 200px;
   border: 0;

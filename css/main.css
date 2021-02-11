@@ -345,10 +345,14 @@ ul {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -424,100 +428,6 @@ header {
   color: #000000;
 }
 
-.site-nav {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 93px;
-  }
-}
-
-.site-nav .nav-item + .nav-item {
-  margin-left: 50px;
-}
-
-.nav-link {
-  color: #212121;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link:hover, .nav-link:focus {
-  color: #2196f3;
-}
-
-.current-link {
-  position: relative;
-  color: #2196f3;
-}
-
-.current-link::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2196f3;
-}
-
-.contacts-container {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .contacts-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: auto;
-  }
-}
-
-.contacts-container .contacts-item + .contacts-item {
-  margin-left: 50px;
-}
-
-.contacts-container .contacts-link,
-.site-nav .nav-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.contacts-container .contacts-link {
-  color: #757575;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts-container .contacts-link:hover, .contacts-container .contacts-link:focus {
-  color: #2196f3;
-  fill: #2196f3;
-}
-
-.icon-mail,
-.icon-tel {
-  margin-right: 10px;
-  fill: currentColor;
-}
-
 .menu-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -527,11 +437,18 @@ header {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  z-index: 1;
 }
 
-.menu-button:focus {
+.menu-button:hover {
   color: #2196f3;
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .icon-button {
@@ -551,17 +468,228 @@ header {
 }
 
 .menu-container {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding: 48px 40px;
   background-color: #ffffff;
 }
 
-.menu-container.is-open {
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 48px 40px;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.site-nav {
   display: block;
+  margin-bottom: 302px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 93px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item:not(:last-child):not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.nav-link {
+  color: #212121;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-link {
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-link:hover, .nav-link:focus {
+    color: #2196f3;
+  }
+}
+
+.current-link {
+  position: relative;
+  color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .current-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196f3;
+  }
+}
+
+.contacts-container {
+  display: block;
+  margin-bottom: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-container .contacts-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-container .contacts-item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-container .contacts-link.tel {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    color: #2196f3;
+  }
+}
+
+.contacts-container .contacts-link.mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.contacts-container .contacts-link {
+  color: #757575;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-container .contacts-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-container .contacts-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contacts-container .contacts-link:hover, .contacts-container .contacts-link:focus {
+    color: #2196f3;
+    fill: #2196f3;
+  }
+}
+
+.icon-mail,
+.icon-tel {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .icon-mail,
+  .icon-tel {
+    display: block;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-mail,
+  .icon-tel {
+    margin-right: 10px;
+  }
+}
+
+.menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-social {
+    display: none;
+  }
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-link {
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }
 
 .overlay {
@@ -584,23 +712,34 @@ header {
 }
 
 .hero-studio .hero-title {
-  width: 696px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-studio .hero-title {
+    width: 696px;
+  }
 }
 
 .hero-studio .main-caption {
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero-studio .main-caption {
+    font-size: 44px;
+  }
+}
+
 .hero-studio .hero-button {
   display: inline-block;
+  margin-top: 30px;
   padding: 10px 32px;
   min-width: 200px;
   border: 0;
@@ -1129,9 +1268,12 @@ header {
   }
 }
 
+.field-send {
+  margin: 0 auto;
+}
+
 .email-input {
   margin-bottom: 20px;
-  width: 100%;
   padding: 15px 16px;
   font: inherit;
   color: #ffffff;
@@ -1260,6 +1402,15 @@ header {
 }
 
 .modal-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   width: 30px;
   height: 30px;

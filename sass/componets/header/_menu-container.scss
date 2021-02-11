@@ -7,10 +7,14 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  z-index: 1;
 
-  &:focus {
+  &:hover {
     color: $accent-color;
     fill: currentColor;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 
@@ -31,16 +35,22 @@
 }
 
 .menu-container {
-  display: none;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding: 48px 40px;
   background-color: $header-background-color;
-}
 
-.menu-container.is-open {
-  display: block;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 48px 40px;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }

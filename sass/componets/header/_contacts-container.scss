@@ -1,42 +1,104 @@
 .contacts-container {
-  display: none;
+  display: block;
+  margin-bottom: 64px;
+  // margin-top: auto;
 
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: column-reverse;
     margin-left: auto;
+    margin-bottom: 0;
   }
 }
 
-.contacts-container .contacts-item + .contacts-item {
-  margin-left: 50px;
+.contacts-container .contacts-item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
-.contacts-container .contacts-link,
-.site-nav .nav-link {
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  align-items: center;
+// .contacts-container .contacts-item + .contacts-item {
+//   margin-left: 50px;
+// }
+.contacts-container .contacts-link.tel {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    // letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}
 
+.contacts-container .contacts-link.mail {
   font-weight: 500;
-  font-size: $text-font-size;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  font-size: 24px;
+  line-height: 1.17;
+  // letter-spacing: 0.02em;
 }
 
 .contacts-container .contacts-link {
   color: $sec-text-color;
-  transition: color $function-duration $function-timing;
+  letter-spacing: 0.02em;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    fill: $accent-color;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: $text-font-size;
+    line-height: 1.14;
+    // letter-spacing: 0.02em;
+    // flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    // align-items: center;
+
+    transition: color $function-duration $function-timing;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      fill: $accent-color;
+    }
   }
 }
 
+// .contacts-container .contacts-link {
+//   @media screen and (min-width: 1200px) {
+//     color: $sec-text-color;
+//     transition: color $function-duration $function-timing;
+
+//     &:hover,
+//     &:focus {
+//       color: $accent-color;
+//       fill: $accent-color;
+//     }
+//   }
+// }
+
 .icon-mail,
 .icon-tel {
-  margin-right: 10px;
-  fill: currentColor;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
 }
