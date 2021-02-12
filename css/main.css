@@ -431,13 +431,14 @@ header {
 }
 
 .menu-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0;
   border: none;
+  outline: none;
   background-color: transparent;
   cursor: pointer;
   z-index: 2;
@@ -761,27 +762,89 @@ header {
 }
 
 .overlay {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/developers.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/developers.jpg");
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headerm.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headerm.jpg");
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headerm@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headerm@2x.jpg");
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 3dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headerm@3x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headerm@3x.jpg");
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .overlay {
+    max-width: 768px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headert.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headert.jpg");
+  }
+}
+
+@media screen and (min-width: 576px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 576px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headert@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headert@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 576px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 576px) and (min-resolution: 3dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headert@3x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headert@3x.jpg");
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .overlay {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headerpc.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headerpc.jpg");
+  }
+}
+
+@media screen and (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 960px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headerpc@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headerpc@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 960px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 960px) and (min-resolution: 3dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero/headerpc@3x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero/headerpc@3x.jpg");
+  }
 }
 
 .hero-studio {
-  padding: 0;
   background-color: #c4c4c4;
   text-align: center;
 }
 
 .hero-studio .hero-title {
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -794,7 +857,6 @@ header {
   font-weight: 900;
   font-size: 26px;
   line-height: 1.36;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -1013,7 +1075,18 @@ header {
   display: block;
   max-width: 100%;
   height: auto;
-  margin-bottom: 30px;
+}
+
+.command-adress {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .command-adress {
+    padding-bottom: 30px;
+  }
 }
 
 .section-command .command-caption {
@@ -1021,7 +1094,6 @@ header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
@@ -1030,7 +1102,6 @@ header {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
 }
@@ -1042,7 +1113,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 30px;
 }
 
 .social-list .social-item + .social-item {
@@ -1367,9 +1437,9 @@ header {
 }
 
 .send-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

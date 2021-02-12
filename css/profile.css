@@ -415,13 +415,14 @@ header {
 }
 
 .menu-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0;
   border: none;
+  outline: none;
   background-color: transparent;
   cursor: pointer;
   z-index: 2;
@@ -1134,9 +1135,9 @@ header {
 }
 
 .send-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
