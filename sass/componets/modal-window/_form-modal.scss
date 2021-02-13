@@ -9,15 +9,13 @@
   color: $primary-text-color;
 }
 
-.input-container {
-  position: relative;
-}
-
 .icon-form {
   position: absolute;
+  display: inline-block;
+  margin-top: 10px;
   width: 18px;
   height: 18px;
-  left: 15px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
   fill: $primary-text-color;
@@ -25,6 +23,7 @@
 
 .form-field {
   display: block;
+  position: relative;
   margin-bottom: 10px;
   font-family: inherit;
   font-size: 12px;
@@ -60,19 +59,19 @@
   &::placeholder {
     font-size: $text-font-size;
     line-height: 1.14;
-    letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
   }
 }
 
 .name {
+  display: block;
   margin-bottom: 4px;
 }
 
 .form-checkbox {
   position: relative;
-  display: block;
+  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -86,33 +85,38 @@
 }
 
 .agree {
-  margin-left: 24px;
+  margin-left: 15px;
   font-size: 12px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-align: center;
+  line-height: 1.17;
 
   color: $sec-text-color;
 
   @media screen and (min-width: 1200px) {
-    margin-left: 0;
     font-size: $text-font-size;
+    line-height: 1.71;
   }
 }
 
 .contract-link {
   text-decoration: underline;
+  font-size: 12px;
+  line-height: 1.17;
+
   color: $accent-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: $text-font-size;
+  }
 }
 
 .checkbox-icon {
   position: absolute;
-  display: block;
   width: 16px;
   height: 15px;
   border: 2px solid $primary-text-color;
   border-radius: 4px;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
 }
 

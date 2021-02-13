@@ -5,30 +5,18 @@
   background-color: $dark-background-color;
 }
 
-// .footer-items {
-//   // @media screen and (min-width: 768px) {
-//   display: flex;
-//   align-items: baseline;
-//   // }
-// }
 .footer-page {
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
   }
-
-  // display: block;
-  // margin-left: auto;
-  // margin-right: auto;
 }
 
 .address-page {
   @media screen and (min-width: 768px) {
     display: flex;
     margin-bottom: 60px;
-    // margin-right: auto;
-    // margin-left: auto;
   }
 
   @media screen and (min-width: 1200px) {

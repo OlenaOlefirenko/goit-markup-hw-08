@@ -2,7 +2,6 @@
   display: inline-flex;
   margin-top: 10px;
   margin-bottom: 10px;
-  // margin: 0;
   padding: 0;
   border: none;
   outline: none;
@@ -37,25 +36,13 @@
 
 .menu-container {
   background-color: $header-background-color;
-  // opacity: 0;
-  // visibility: hidden;
-  // pointer-events: none;
-  // transition: $function-duration $function-timing;
-  // transform: scale(1);
 
-  // .menu-container.is-open {
-  //   opacity: 1;
-  //   visibility: visible;
-  //   pointer-events: initial;
-  // }
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    // height: auto;
-    // height: 100%;
     padding: 48px 40px;
     z-index: 1;
 
@@ -69,6 +56,5 @@
     justify-content: space-between;
     flex-grow: 1;
     align-items: center;
-    // text-align: center;
   }
 }

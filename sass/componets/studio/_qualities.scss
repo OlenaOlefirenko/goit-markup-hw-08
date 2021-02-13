@@ -38,23 +38,12 @@
   }
 }
 
-// // @media screen and (min-width: 1200px) {
-// //   .quality-list .quality-item + .quality-item {
-// //     margin-left: 30px;
-
-//     // &: {
-//     //   width: 270px;
-//     // }
-//   }
-// }
-
 .section-quality .quality-caption {
   margin-bottom: 10px;
 
   font-weight: $bold-font-weight;
   font-size: $text-font-size;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: $primary-text-color;
@@ -63,8 +52,6 @@
 .section-quality .text-quality {
   font-size: $text-font-size;
   line-height: 1.71;
-
-  letter-spacing: 0.03em;
 
   color: $sec-text-color;
 }

@@ -1,13 +1,10 @@
 .contacts-container {
   display: block;
   margin-bottom: 64px;
-  // margin-top: auto;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
-    // align-items: center;
-    // margin-left: auto;
     margin-top: 21px;
     margin-bottom: 21px;
   }
@@ -41,16 +38,12 @@
   }
 }
 
-// .contacts-container .contacts-item + .contacts-item {
-//   margin-left: 50px;
-// }
 .contacts-container .contacts-link.tel {
   @media screen and (max-width: 767px) {
     margin-bottom: 32px;
     font-weight: 500;
     font-size: 34px;
     line-height: 1.18;
-    // letter-spacing: 0.02em;
     color: $accent-color;
   }
 }
@@ -61,8 +54,6 @@
     font-size: 24px;
     line-height: 1.17;
   }
-
-  // letter-spacing: 0.02em;
 }
 
 .contacts-container .contacts-link {
@@ -75,18 +66,12 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.14;
-    // letter-spacing: 0.02em;
-    // flex-direction: column-reverse;
   }
 
   @media screen and (min-width: 1200px) {
-    // display: flex;
-    // flex-direction: row;
     padding-top: 32px;
     padding-bottom: 32px;
     font-size: $text-font-size;
-    // justify-content: center;
-    // align-items: center;
 
     transition: color $function-duration $function-timing;
 
@@ -98,18 +83,6 @@
   }
 }
 
-// .contacts-container .contacts-link {
-//   @media screen and (min-width: 1200px) {
-//     color: $sec-text-color;
-//     transition: color $function-duration $function-timing;
-
-//     &:hover,
-//     &:focus {
-//       color: $accent-color;
-//       fill: $accent-color;
-//     }
-//   }
-// }
 .icon-mail {
   width: 14px;
   height: 10px;

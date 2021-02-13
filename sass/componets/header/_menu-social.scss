@@ -4,9 +4,6 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
-
-  //   justify-content: center;
-  //   align-items: center;
 }
 
 .menu-item {
@@ -17,24 +14,10 @@
 }
 
 .menu-link {
-  //   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  //   padding: 10px;
   padding-right: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
-  letter-spacing: 0.02em;
 
   color: $accent-color;
-
-  //   &:not(:last-child) {
-  //     padding-right: 10px;
-  //   }
-
-  //   &:not(:last-child) {
-  //     border-right: 1px solid rgba(33, 33, 33, 0.2);
-  //   }
-  //   &:not(:last-child) {
-  //     border-right: 1px solid rgba(33, 33, 33, 0.2);
-  //   }
 }
