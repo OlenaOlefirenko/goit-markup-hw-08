@@ -966,7 +966,14 @@ header {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: #212121;
+}
+
+@media screen and (min-width: 768px) {
+  .section-quality .quality-caption {
+    text-align: left;
+  }
 }
 
 .section-quality .text-quality {
