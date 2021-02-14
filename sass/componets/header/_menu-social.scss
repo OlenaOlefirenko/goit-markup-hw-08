@@ -1,5 +1,6 @@
 .menu-social {
   display: flex;
+  flex-wrap: wrap;
 
   @media screen and (min-width: 768px) {
     display: none;

@@ -1,6 +1,6 @@
 .contacts-container {
   display: block;
-  margin-bottom: 64px;
+  // margin-bottom: 64px;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -39,12 +39,25 @@
 }
 
 .contacts-container .contacts-link.tel {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 32px;
-    font-weight: 500;
+  margin-bottom: 32px;
+  font-weight: 500;
+
+  color: $accent-color;
+  @media screen and (max-width: 379px) {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: 380px) and (max-width: 767px) {
     font-size: 34px;
     line-height: 1.18;
-    color: $accent-color;
+    // font-weight: 500;
+    // font-size: 34px;
+    // line-height: 1.18;
+    // color: $accent-color;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    color: $sec-text-color;
   }
 }
 
@@ -58,7 +71,6 @@
 
 .contacts-container .contacts-link {
   color: $sec-text-color;
-  letter-spacing: 0.02em;
 
   @media screen and (min-width: 768px) {
     display: flex;
